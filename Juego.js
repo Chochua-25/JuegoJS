@@ -4,7 +4,8 @@ function aleatorio3() {
 }
 
 let Ganador = false;
-let contador = 0;
+let contadorh = 0;
+let contadorc = 0;
 
 while (!Ganador) {
   let eleccion = prompt("Elige el número de la elección: Piedra:1, Papel:2 o Tijera:3");
@@ -22,10 +23,10 @@ while (!Ganador) {
 
   if (eleccion === 1 && r === 1 || eleccion === 2 && r === 2 || eleccion === 3 && r === 3  ) {
     alert("¡Empate!");
-  } else if (eleccion === 1 && r === 2 || eleccion === 2 && r === 3 || eleccion === 3 && r === 1) {
+  } else if (eleccion === 1 && r === 3 || eleccion === 2 && r === 1 || eleccion === 3 && r === 2) {
     alert("¡Ganaste!");
-    contador++;
-    if (contador === 3) {
+    contadorh++;
+    if (contadorh === 3) {
       Ganador = true;
       alert("¡Has ganado el juego!, a ganado el humano!");
     }
@@ -33,8 +34,8 @@ while (!Ganador) {
 
 else if(eleccion === 1 && r === 2 || eleccion === 2 && r === 3 || eleccion === 3 && r === 1){
     alert("¡Perdiste!");
-    contador++;
-    if (contador === 3) {
+    contadorc++;
+    if (contadorc === 3) {
       Ganador = true;
       alert("¡Has ganado el juego!, a ganado la computadora!");
     }
